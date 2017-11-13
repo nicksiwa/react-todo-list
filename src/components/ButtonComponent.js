@@ -4,8 +4,10 @@ class Button extends Component {
   handleSubmit = (e) => {
     const {onSubmit} = this.props
     const {value} = this.props
+    const {onReset} = this.props
     if (!value) return
     onSubmit(value)
+    onReset()
   }
   render () {
     return (

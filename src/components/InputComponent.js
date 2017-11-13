@@ -10,11 +10,16 @@ class Input extends Component {
       value: e.target.value
     })
   }
+  resetTextbox = () => {
+    this.setState({
+      value: ''
+    })
+  }
   render () {
     return (
       <div>
         <input type={'text'} placeholder={this.props.placeholder} value={this.state.value} onChange={this.handleChange}/>
-        <Button text='Add todo' value={this.state.value} onSubmit={this.props.onSubmit}/>
+        <Button text='Add todo' value={this.state.value} onSubmit={this.props.onSubmit} onReset={this.resetTextbox}/>
       </div>
     )
   }
