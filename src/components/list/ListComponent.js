@@ -2,10 +2,15 @@ import React, { Component } from 'react'
 import Delete from './Delete'
 
 class List extends Component {
+  renderItem = (text, i) => {
+    return (
+      <li>{text} <Delete text='Delete'/></li>
+    )
+  }
   render () {
     return (
       <ul>
-        <li>test <Delete text='Delete'/></li>
+        {this.props.list.map(this.renderItem)}
       </ul>
     )
   }
