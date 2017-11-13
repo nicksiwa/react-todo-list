@@ -15,6 +15,12 @@ class App extends Component {
       todos: [text, ...todos]
     })
   }
+  removeTodo = (index) => {
+    const {todos} = this.state
+    this.setState({
+      todos: todos.filter((todo, i) => i !== index)
+    })
+  }
   render () {
     return (
       <div className="App">
