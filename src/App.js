@@ -22,7 +22,7 @@ class App extends Component {
         <Navbar />
         <Title title='To do list'/>
         <Input type='text' placeholder='Type todo here !!!'/>
-        <Button text='Add todo'/>
+        <Button text='Add todo' onSubmit={this.addTodo}/>
         <List list={this.state.todos}/>
       </div>
     )
