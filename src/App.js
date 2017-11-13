@@ -7,6 +7,9 @@ import List from './components/list/ListComponent'
 import Navbar from './components/navbar/NavbarComponent'
 
 class App extends Component {
+  state = {
+    todos: ['list 1', 'list 2']
+  }
   render () {
     return (
       <div className="App">
@@ -14,7 +17,7 @@ class App extends Component {
         <Title title='To do list'/>
         <Input type='text' placeholder='Type todo here !!!'/>
         <Button text='Add todo'/>
-        <List />
+        <List list={this.state.todos}/>
       </div>
     )
   }
