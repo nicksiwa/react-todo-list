@@ -10,6 +10,12 @@ class App extends Component {
   state = {
     todos: ['list 1', 'list 2']
   }
+  addTodo = (text) => {
+    const {todos} = this.setState
+    this.setState({
+      todos: [text, ...todos]
+    })
+  }
   render () {
     return (
       <div className="App">
