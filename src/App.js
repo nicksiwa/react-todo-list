@@ -27,7 +27,7 @@ class App extends Component {
         <Navbar />
         <Title title='To do list'/>
         <Input placeholder='Type todo here !!!' onSubmit={this.addTodo}/>
-        <List list={this.state.todos}/>
+        <List list={this.state.todos} onDelete={this.removeTodo}/>
       </div>
     )
   }
