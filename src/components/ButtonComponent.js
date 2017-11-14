@@ -11,7 +11,9 @@ class Button extends Component {
   }
   render () {
     return (
-      <button type='submit' onClick={this.handleSubmit}>{this.props.text}</button>
+      <button type='submit' onClick={this.handleSubmit}>
+        {this.props.text}
+      </button>
     )
   }
 }

@@ -18,8 +18,14 @@ class Input extends Component {
   render () {
     return (
       <div>
-        <input type={'text'} placeholder={this.props.placeholder} value={this.state.value} onChange={this.handleChange}/>
-        <Button text='Add todo' value={this.state.value} onSubmit={this.props.onSubmit} onReset={this.resetTextbox}/>
+        <input type={'text'}
+          placeholder={this.props.placeholder}
+          value={this.state.value}
+          onChange={this.handleChange}/>
+        <Button text='Add todo'
+          value={this.state.value}
+          onSubmit={this.props.onSubmit}
+          onReset={this.resetTextbox}/>
       </div>
     )
   }

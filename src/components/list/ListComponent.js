@@ -4,7 +4,12 @@ import Delete from './Delete'
 class List extends Component {
   renderItem = (text, i) => {
     return (
-      <li>{text} <Delete text='Delete' onDelete={this.props.onDelete} index={i}/></li>
+      <li>
+        {text}
+        <Delete text='Delete'
+          onDelete={this.props.onDelete}
+          index={i}/>
+      </li>
     )
   }
   render () {
